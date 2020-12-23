@@ -1,0 +1,26 @@
+[
+    {
+        "userId": 1,
+        "routineId": 1
+    },
+    {
+        "userId": 1,
+        "routineId": 3
+    },
+    {
+        "userId": 1,
+        "routineId": 7
+    },
+    {
+        "userId": 1,
+        "routineId": 15
+    },
+    {
+        "userId": 1,
+        "routineId": 31
+    },
+    {
+        "userId": 1,
+        "routineId": 63
+    }
+]

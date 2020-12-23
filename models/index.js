@@ -7,7 +7,7 @@ const UserRoutine = require("./UserRoutine");
 User.belongsToMany(Routine, { through: UserRoutine });
 
 // Routine belongToMany User (through UserRoutine).
-// Define the UserRoutine model as our through table. Sequilize creates a tagId as foreign key.
+// Define the UserRoutine model as our through table. Sequilize creates a routineId as foreign key.
 Routine.belongsToMany(User, { through: UserRoutine });
 
 // Package our models and export them as an object so we can import them together and use their proper names.
