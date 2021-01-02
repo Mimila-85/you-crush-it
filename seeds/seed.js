@@ -1,9 +1,9 @@
 const sequelize = require ("../config/connection");
-const { User, Routine, UserRoutine } = require ("../models");
+const { User, Routine, Exercise } = require ("../models");
 
 const userData = require ("./userData.json");
 const routineData = require ("./routineData.json");
-const userRoutineData = require ("./userRoutineData.json");
+const exerciseData = require ("./exerciseData.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true});
@@ -15,8 +15,8 @@ const seedDatabase = async () => {
   console.log("----- USER SEEDED -----");
   await Routine.bulkCreate(routineData);
   console.log("----- ROUTINE SEEDED -----");
-  await UserRoutine.bulkCreate(userRoutineData);
-  console.log("----- USERROUTINE SEEDED -----");
+  await Exercise.bulkCreate(exerciseData);
+  console.log("----- EXERCISE SEEDED -----");
 
   process.exit(0);
 };
