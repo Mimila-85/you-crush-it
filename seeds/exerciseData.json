@@ -1,0 +1,367 @@
+[
+    {
+        "category": "Upper Body",
+        "sub_category": "Chest",
+        "name": "Bench Press"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Chest",
+        "name": "Incline Bench Press"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Chest",
+        "name": "Dumbbell Flye"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Chest",
+        "name": "Cable Crossover"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Chest",
+        "name": "Lying Leg Lifts"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Chest",
+        "name": "Frog Crunch"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Chest",
+        "name": "Push-Up"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Chest",
+        "name": "Dumbbell Clean"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Chest",
+        "name": "Dumbbell Walking Lunge"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Chest",
+        "name": "Kettlebell Swing"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Shoulders",
+        "name": "Shoulder Press"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Shoulders",
+        "name": "Upright Row"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Shoulders",
+        "name": "Dumbbell Lateral Raise"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Shoulders",
+        "name": "Dumbbell Rear Delt Flye"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Shoulders",
+        "name": "Dumbbel Front Raise"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Shoulders",
+        "name": "Med Ball Overhead Throw"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Shoulders",
+        "name": "Burpee"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Shoulders",
+        "name": "Ketteble Swing"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Shoulders",
+        "name": "Med Ball Slam"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Back",
+        "name": "Bent-Over Barbell Rows"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Back",
+        "name": "Wide Grip Pulldown"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Back",
+        "name": "Seated Cable Row"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Back",
+        "name": "Straight-Arm Pulldown"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Back",
+        "name": "Crossover Crunch"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Back",
+        "name": "Frog Crunch"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Back",
+        "name": "Push-Up"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Back",
+        "name": "Dead Curl Press"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Back",
+        "name": "Barbell Cleans"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Back",
+        "name": "Burpees"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Biceps and Triceps",
+        "name": "Lying Tricep Extension"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Biceps and Triceps",
+        "name": "Triceps Pulldown"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Biceps and Triceps",
+        "name": "Dumbbell Tricep Extension"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Biceps and Triceps",
+        "name": "Barbell Curl"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Biceps and Triceps",
+        "name": "Incline Dumbbell Curl"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Biceps and Triceps",
+        "name": "Dumbbell Hammer Curl"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Biceps and Triceps",
+        "name": "Burpee"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Biceps and Triceps",
+        "name": "Dumbbell Walking Lunge"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Biceps and Triceps",
+        "name": "Dead Landmines"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "Biceps and Triceps",
+        "name": "Band Roundhouse Elbow"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "ABS",
+        "name": "Sit-Ups"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "ABS",
+        "name": "Flutter Kicks"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "ABS",
+        "name": "Leg Raises"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "ABS",
+        "name": "Bicycle Crunches"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "ABS",
+        "name": "Knee Crunches"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "ABS",
+        "name": "Leg Pull-Ins"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "ABS",
+        "name": "Plank Arm Lifts"
+    },
+    {
+        "category": "Upper Body",
+        "sub_category": "ABS",
+        "name": "Elbow Plank"
+    },
+    {
+        "category": "Lower Body",
+        "sub_category": "Legs and Calves",
+        "name": "Squat"
+    },
+    {
+        "category": "Lower Body",
+        "sub_category": "Legs and Calves",
+        "name": "Deadlift"
+    },
+    {
+        "category": "Lower Body",
+        "sub_category": "Legs and Calves",
+        "name": "Leg Extension"
+    },
+    {
+        "category": "Lower Body",
+        "sub_category": "Legs and Calves",
+        "name": "Leg Curl"
+    },
+    {
+        "category": "Lower Body",
+        "sub_category": "Legs and Calves",
+        "name": "Standing Calf Raise"
+    },
+    {
+        "category": "Lower Body",
+        "sub_category": "Legs and Calves",
+        "name": "Seated Calf Raise"
+    },
+    {
+        "category": "Lower Body",
+        "sub_category": "Legs and Calves",
+        "name": "Dumbbell Walking Lunge"
+    },
+    {
+        "category": "Lower Body",
+        "sub_category": "Legs and Calves",
+        "name": "Dead Landmines"
+    },
+    {
+        "category": "Lower Body",
+        "sub_category": "Legs and Calves",
+        "name": "Kettlebell Swing"
+    },
+    {
+        "category": "Lower Body",
+        "sub_category": "Legs and Calves",
+        "name": "Band Woodchopper"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine Free",
+        "name": "Jumping Jacks"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine Free",
+        "name": "Side Lungs"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine Free",
+        "name": "Squats"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine Free",
+        "name": "Jog in Place"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine Free",
+        "name": "Burpees"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine Free",
+        "name": "Lunges"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine Free",
+        "name": "Jump Rope"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine Free",
+        "name": "Mountain Climbers"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine Free",
+        "name": "Speed Skaters"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine Free",
+        "name": "Butt Kickers"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine Free",
+        "name": "Lunge Kicks"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine Free",
+        "name": "March in Place"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine",
+        "name": "Treadmill"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine",
+        "name": "Stairmaster"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine",
+        "name": "Elliptical"
+    },
+    {
+        "category": "Cardio",
+        "sub_category": "Machine",
+        "name": "Bike"
+    }
+]
