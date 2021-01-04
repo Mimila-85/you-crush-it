@@ -42,7 +42,7 @@ Routine.init(
     exercise_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
+        model: "exercise",
         key: "id",
       },
     },

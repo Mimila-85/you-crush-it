@@ -19,7 +19,7 @@ Workout.init(
     routine_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
+        model: "routine",
         key: "id",
       },
     },
