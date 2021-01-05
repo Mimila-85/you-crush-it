@@ -17,8 +17,12 @@
       <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
       <li class="li-inline nav-item"><a href="/routine">Routine</a></li>
       <li class="li-inline nav-item"><a href="/workout">Workout</a></li>
-      <li class="li-inline nav-item"><a href="/login">Login</a></li>
+      
+      {{#if logged_in}}
       <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
+      {{else}}
+      <li class="li-inline nav-item"><a href="/login">Login</a></li>
+      {{/if}}
     </ul>
   </nav>
   <header class="hero">
@@ -35,4 +39,6 @@
 </body>
 
 </html>
+{{#if logged_in}}
 <script src="/javascript/logout.js"></script>
+{{/if}}
