@@ -60,4 +60,39 @@ router.put("/:id", withAuth, async (req, res) => {
   }
 });
 
+router.get("/", withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password", "email"] },
+      include: [
+        { 
+          model: Workout,
+          attributes: [ "date" ],
+          include: [
+            {
+              model: Routine,
+              attributes: ["name_routine", "set", "repetition", "duration_min"],
+              include: [
+                {
+                  model: Exercise,
+                  attributes: ["name"]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.json(user)
+    
+  } catch (err) {
+    // Server error response 500 - Internal Server Error
+    res.status(500).json(err.message);
+  }
+});
+
 module.exports = router;
