@@ -1,0 +1,22 @@
+[
+    {
+        "routineId": 1,
+        "exerciseId": 1
+    },
+    {
+        "routineId": 2,
+        "exerciseId": 2
+    },
+    {
+        "routineId": 3,
+        "exerciseId": 3
+    },
+    {
+        "routineId": 4,
+        "exerciseId": 4
+    },
+    {
+        "routineId": 5,
+        "exerciseId": 5
+    }
+]
