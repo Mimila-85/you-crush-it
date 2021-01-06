@@ -1,0 +1,8 @@
+/* @media (max-width: 575.98px) { ... } */
+:root {
+    background-color: tomato;
+}
+
+.main {
+    background-image: linear-gradient(white, grey) !important;
+}

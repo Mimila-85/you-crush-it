@@ -4,34 +4,94 @@
         "set": 3,
         "repetition": 10,
         "duration_min": null,
-        "user_id": 1
+        "user_id": 1,
+        "array_of_exercises": [
+            {
+                "type": "Pushups",
+                "sets": 3,
+                "repetition": 10
+            },
+            {
+                "type": "Bench Press",
+                "sets": 3,
+                "repetition": 10
+            }
+        ]
     },
     {
         "name_routine": "Upper Body",
         "set": 3,
         "repetition": 10,
         "duration_min": null,
-        "user_id": 1
+        "user_id": 1,
+        "array_of_exercises": [
+            {
+                "type": "Pushups",
+                "sets": 3,
+                "repetition": 10
+            },
+            {
+                "type": "Bench Press",
+                "sets": 3,
+                "repetition": 10
+            }
+        ]
     },
     {
         "name_routine": "Upper Body",
         "set": 3,
         "repetition": 10,
         "duration_min": null,
-        "user_id": 1
+        "user_id": 1,
+        "array_of_exercises": [
+            {
+                "type": "Pushups",
+                "sets": 3,
+                "repetition": 10
+            },
+            {
+                "type": "Bench Press",
+                "sets": 3,
+                "repetition": 10
+            }
+        ]
     },
     {
         "name_routine": "Upper Body",
         "set": 3,
         "repetition": 10,
         "duration_min": null,
-        "user_id": 1
+        "user_id": 1,
+        "array_of_exercises": [
+            {
+                "type": "Pushups",
+                "sets": 3,
+                "repetition": 10
+            },
+            {
+                "type": "Bench Press",
+                "sets": 3,
+                "repetition": 10
+            }
+        ]
     },
     {
         "name_routine": "Upper Body",
         "set": 3,
         "repetition": 10,
         "duration_min": null,
-        "user_id": 1
+        "user_id": 1,
+        "array_of_exercises": [
+            {
+                "type": "Pushups",
+                "sets": 3,
+                "repetition": 10
+            },
+            {
+                "type": "Bench Press",
+                "sets": 3,
+                "repetition": 10
+            }
+        ]
     }
 ]

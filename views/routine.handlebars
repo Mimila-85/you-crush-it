@@ -1,11 +1,54 @@
-<div class="posts list-group">
-  <div class= "row">
+{{!-- @media (max-width: 767.98px) { ... } --}}
+<h4 class="text-center">myRoutines</h4>
+<div class="row text-center">
+  <div class="input-group">
+    <select class="custom-select col-auto" id="inputGroupSelect01">
+      <option selected>Choose...</option>
+      {{#each routine}}
+      <option>{{name_routine}}</option>
+      {{/each}}
+      {{!-- <option value="2">Two</option>
+      <option value="3">Three</option> --}}
+    </select>
+    <div class="input-group-append col-3">
+      <button class="btn" type="button">GO</button>
+    </div>
+  </div>
+</div>
+<h5 class="text-center">
+  Create New Routine
+</h5>
+<div class="row">
+  <div class="input-group">
+    <div class="col-auto">
+      <input type="text" class="form-control" placeholder="Exercise">
+    </div>
+    <div class="col-2">
+      <input type="text" class="form-control col-2" placeholder="Sets">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control col-2" placeholder="Reps">
+    </div>
 
-    <form class="routine-form" action="">
-      <input type="text" id="routine_name" value="">
-      <button type= "submit">Create</button>
-    </form>
+    {{!-- <button class="col-auto" type="button">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Exercise
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        {{#each array_of_exercises }}
+        <a class="dropdown-item" href="#">{{this}}</a>
+        {{/each}}
+    </button>
+    <button class="col-3" type="button">Sets</button>
+    <button class="col-3" type="button">Reps</button> --}}
 
-  </div> 
+  </div>
+
+
+
+</div>
+<div class="d-flex justify-content-center">
+  <button type="submit">Save myRoutine</button>
 </div>
 <script src="/javascript/routine.js"></script>
