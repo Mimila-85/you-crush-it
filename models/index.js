@@ -31,12 +31,12 @@ Workout.belongsTo(User, {
   foreignKey: "user_id"
 });
 
-Workout.hasOne(Routine, {
+Workout.belongsTo(Routine, {
   foreignKey: "routine_id",
   onDelete: "SET NULL"
 });
 
-Routine.belongsTo(Workout, {
+Routine.hasOne(Workout, {
   foreignKey: "routine_id"
 });
 

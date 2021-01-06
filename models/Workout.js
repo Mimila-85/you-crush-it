@@ -23,13 +23,13 @@ Workout.init(
         key: "id",
       },
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "user",
-        key: "id",
-      },
-    },
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "user",
+    //     key: "id",
+    //   },
+    // },
     array_of_results: {
       type: DataTypes.TEXT,
       allowNull: false,
