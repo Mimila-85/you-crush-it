@@ -27,6 +27,8 @@ async function newFormHandler(event) {
   if (response.ok) {
     document.location.replace('/');
   } else {
+    console.log(response.json());
+    
     alert('Failed to add routine');
   }
 }
