@@ -2,6 +2,8 @@ const User = require("./User");
 const Routine = require("./Routine");
 const Exercise = require("./Exercise");
 const Workout = require("./Workout");
+const RoutineExercise = require("./RoutineExercise");
+
 
 User.hasMany(Routine, {
   foreignKey: "user_id",
@@ -12,14 +14,13 @@ Routine.belongsTo(User, {
   foreignKey: "user_id"
 });
 
-Routine.hasMany(Exercise, {
-  foreignKey: "exercise_id",
-  onDelete: "SET NULL"
-});
+// Routine belongToMany Exercise (through routineExercise)
+// Define the RoutineExercise model as our through table. Sequelize creates a productId as foreign key.
+Routine.belongsToMany(Exercise, { through: RoutineExercise });
 
-Exercise.belongsTo(Routine, {
-  foreignKey: "exercise_id"
-});
+// Exercise belongToMany Routine (through routineExercise).
+// Define the RoutineExercise model as our through table. Sequelize creates a tagId as foreign key.
+Exercise.belongsToMany(Routine, { through: RoutineExercise });
 
 User.hasMany(Workout, {
   foreignKey: "user_id",
@@ -44,5 +45,6 @@ module.exports = {
   User,
   Routine,
   Exercise,
-  Workout
+  Workout,
+  RoutineExercise
 };

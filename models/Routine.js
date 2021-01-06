@@ -39,13 +39,6 @@ Routine.init(
         isNumeric: true // will only allow numbers
       }
     },
-    exercise_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "exercise",
-        key: "id",
-      },
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
