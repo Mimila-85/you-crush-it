@@ -11,15 +11,7 @@ Routine.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    category: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    sub_category: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    name: {
+    name_routine: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -39,13 +31,27 @@ Routine.init(
         isNumeric: true // will only allow numbers
       }
     },
-    time_min: {
+    duration_min: {
       type: DataTypes.INTEGER,
       allowNull: true,
       defaultValue: 30,
       validate: {
         isNumeric: true // will only allow numbers
       }
+    },
+    exercise_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "exercise",
+        key: "id",
+      },
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+      },
     },
   },
   {
