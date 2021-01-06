@@ -15,6 +15,7 @@ Routine.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+
     // set: {
     //   type: DataTypes.INTEGER,
     //   allowNull: true,
@@ -23,6 +24,7 @@ Routine.init(
     //     isNumeric: true // will only allow numbers
     //   }
     // },
+
     // repetition: {
     //   type: DataTypes.INTEGER,
     //   allowNull: true,
@@ -31,10 +33,21 @@ Routine.init(
     //     isNumeric: true // will only allow numbers
     //   }
     // },
+
+    // array of excerId
     array_of_exercises: {
       type: DataTypes.TEXT,
-      alowNull: false,
+      allowNull: false,
+
     },
+    // duration_min: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    //   defaultValue: 30,
+    //   validate: {
+    //     isNumeric: true // will only allow numbers
+    //   }
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
