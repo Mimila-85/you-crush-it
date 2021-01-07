@@ -1,9 +1,9 @@
 let plan = [];
 const array_of_exercises = [];
+const name_routine = document.querySelector('#newRoutine_name').value;
 
 async function newRoutineHandler(event) {
   event.preventDefault();
-  const name_routine = document.querySelector('#newRoutine_name').value;
   if (name_routine == null) {
     alert("Give this myRoutine a Name :)")
   } else {
@@ -19,16 +19,22 @@ async function newRoutineHandler(event) {
     //if the routine is added, the 'all' template will be rerendered
     if (response.ok) {
       document.location.replace('/');
-    } else {
       console.log(response.json());
-
+    } else {
       alert('Failed to add routine');
     };
     array_of_exercises.push(plan);
+    console.log(array_of_exercises)
   };
-  goToWorkout();
+  saveToStorage();
+  if (confirm("New myRoutine added!! Would you like to workout now?")) {
+    console.log("y");
+    window.open("/workout" , "_self")
 
-
+  } else {
+    console.log("n");
+    window.open("/routine" , "_self")
+  };
 };
 
 document.querySelector('#newRoutine').addEventListener('click', newRoutineHandler);
@@ -80,17 +86,24 @@ async function routineFormHandler(event) {
     $(".results").append(myDiv);
 
     //push each routine segment into holder array with key properties
-    plan.push("name", exercise);
-    plan.push("sets", sets);
-    plan.push("reps", reps);
+    plan.push({"name": exercise});
+    plan.push({"sets": sets});
+    plan.push({"reps": reps});
+    let pod = plan.reduce();
+    console.log(pod)
+
     console.log(plan);
   };
 
 };
 document.querySelector('#addBtn').addEventListener('click', routineFormHandler);
 
-async function goToWorkout(event) {
-  event.preventDefault();
-  body.empty();
-  
-}
+async function saveToStorage() {
+  localStorage.setItem('lastRoutine', JSON.stringify(array_of_exercises));
+  localStorage.setItem('lastRoutineName', JSON.stringify(name_routine));
+
+};
+
+
+
+

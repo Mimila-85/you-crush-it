@@ -19,7 +19,7 @@ Routine.init(
     },
 
     array_of_exercises: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSON,
       //false
       allowNull: false,
 
