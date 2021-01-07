@@ -1,22 +1,18 @@
 [
     {
-        "routineId": 1,
-        "exerciseId": 1
+        "routine_id": 1,
+        "exercise_id": 7
     },
     {
-        "routineId": 2,
-        "exerciseId": 2
+        "routine_id": 1,
+        "exercise_id": 1
     },
     {
-        "routineId": 3,
-        "exerciseId": 3
+        "routine_id": 2,
+        "exercise_id": 48
     },
     {
-        "routineId": 4,
-        "exerciseId": 4
-    },
-    {
-        "routineId": 5,
-        "exerciseId": 5
+        "routine_id": 2,
+        "exercise_id": 63
     }
 ]

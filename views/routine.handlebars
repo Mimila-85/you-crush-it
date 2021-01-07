@@ -1,8 +1,58 @@
-<div class="posts list-group">
-  {{#each posts}}
-    <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">
-      <span>{{title}}</span>
-      <span>{{format_date createdAt}}</span>
-    </a>
-  {{/each}}
+<h4 class="text-center">myRoutines</h4>
+<div class="row text-center">
+  <div class="input-group">
+    <select class="custom-select col-auto rounded" style="height: 40px;" id="savedRoutine">
+      <option selected>Choose...</option>
+      {{#each routine}}
+      <option>{{name_routine}}</option>
+      {{/each}}
+      {{!-- Hard coded test option --}}
+      <option>test</option>
+    </select>
+    <div class="input-group-append col-3">
+      {{!-- <button class="btn rounded" style="height: 40px;" type="submit" id="go" href="/workout">GO</button> --}}
+      <a href="/workout" class="button btn rounded" style="height: 40px;">Go</a>
+    </div>
+  </div>
 </div>
+<h5 class="text-center rounded">
+  Create New Routine
+</h5>
+<div class="row">
+  <div class="input-group">
+    <select class="custom-select col-auto rounded dress" id="exercise">
+      <option selected>Choose...</option>
+      {{#each exercise}}
+      <option>{{name}}</option>
+      {{/each}}
+      {{!-- Hard coded test option --}}
+      <option>test</option>
+    </select>
+    {{!-- <div class="col-auto">
+      <input type="text" class="form-control rounded" placeholder="Exercise" id="exercise">
+    </div> --}}
+    <div class="col-2">
+      <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Sets" id="sets">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Reps" id="reps">
+    </div>
+
+  </div>
+
+  <button type="submit" class="btn rounded" style="height: 40px;" id="addBtn">Add Exercise</button>
+
+  <div class="results container-fliud"></div>
+
+  <div class="col-auto">
+    <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Name myRoutine"
+      id="newRoutine_name">
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <button type="submit" class="btn rounded" style="height: 40px;" id="newRoutine">Save myRoutine</button>
+  </div>
+  
+  {{!-- break --}}
+
+  <script src="/javascript/routine.js"></script>

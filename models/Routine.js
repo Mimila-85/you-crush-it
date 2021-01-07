@@ -7,12 +7,14 @@ Routine.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      //false
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     name_routine: {
       type: DataTypes.STRING,
+      //false
       allowNull: false,
     },
    
@@ -38,7 +40,8 @@ Routine.init(
     // },
     // array of excerId
     array_of_exercises: {
-      type: DataTypes.TEXT,
+      type: DataTypes.JSON,
+      //false
       allowNull: false,
     },
     // duration_min: {
@@ -55,6 +58,8 @@ Routine.init(
         model: "user",
         key: "id",
       },
+      //remove
+      allowNull: true,
     },
   },
   {

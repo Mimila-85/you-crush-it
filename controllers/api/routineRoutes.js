@@ -8,7 +8,6 @@ router.post("/", async (req, res) => {
       ...req.body,
       user_id: req.session.user_id,
     });
-
     res.status(200).json(newRoutine);
   } catch (err) {
     res.status(400).json(err.message);
@@ -35,11 +34,25 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-router.put("/:id", withAuth, async (req, res) => {
+router.get("/", 
+// withAuth,
+async (req, res) => {
+  try {
+    Routine.findAll({
+      where: {
+        user_id: req.session.user_id,
+      }
+    });
+  } catch (err) {
+    res.status(400).json(err.message);
+  }
+});
+
+router.put("/:id", async (req, res) => {
   try {
     const updateRoutine = await Routine.update(
       {
-      ...req.body,
+        ...req.body,
       },
       {
         where: {
