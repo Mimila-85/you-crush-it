@@ -31,7 +31,7 @@ Workout.init(
     //   },
     // },
     array_of_results: {
-      type: DataTypes.TEXT,
+      type: DataTypes.JSON,
       allowNull: false,
     },
   },

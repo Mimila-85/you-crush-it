@@ -1,23 +1,26 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Routine extends Model { }
+class Routine extends Model {}
 
 Routine.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      //false
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     name_routine: {
       type: DataTypes.STRING,
+      //false
       allowNull: false,
     },
 
     array_of_exercises: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSON,
+      //false
       allowNull: false,
 
     },
@@ -35,6 +38,8 @@ Routine.init(
         model: "user",
         key: "id",
       },
+      //remove
+      allowNull: true,
     },
   },
   {

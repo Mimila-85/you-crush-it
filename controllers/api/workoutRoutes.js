@@ -2,7 +2,9 @@ const router = require("express").Router();
 const { Workout, User, Routine, Exercise } = require("../../models");
 const withAuth = require("../../utils/auth")
 
-router.post("/", async (req, res) => {
+router.post("/", 
+// withAuth,
+async (req, res) => {
   try {
     const newWorkout = await Workout.create({
       ...req.body,
@@ -15,7 +17,9 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", 
+// withAUth,
+async (req, res) => {
   try {
     const workoutDelete = await Workout.destroy({
       where: {
@@ -35,7 +39,9 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-router.put("/:id", withAuth, async (req, res) => {
+router.put("/:id", 
+// withAuth, 
+async (req, res) => {
   try {
     const updateWorkout = await Workout.update(
       {

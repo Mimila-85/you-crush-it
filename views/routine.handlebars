@@ -1,17 +1,17 @@
-{{!-- @media (max-width: 767.98px) { ... } --}}
 <h4 class="text-center">myRoutines</h4>
 <div class="row text-center">
   <div class="input-group">
-    <select class="custom-select col-auto rounded" id="inputGroupSelect01">
+    <select class="custom-select col-auto rounded" style="height: 40px;" id="savedRoutine">
       <option selected>Choose...</option>
       {{#each routine}}
       <option>{{name_routine}}</option>
       {{/each}}
-      {{!-- <option value="2">Two</option>
-      <option value="3">Three</option> --}}
+      {{!-- Hard coded test option --}}
+      <option>test</option>
     </select>
     <div class="input-group-append col-3">
-      <button class="btn rounded" type="button" id="go">GO</button>
+      {{!-- <button class="btn rounded" style="height: 40px;" type="submit" id="go" href="/workout">GO</button> --}}
+      <a href="/workout" class="button btn rounded" style="height: 40px;">Go</a>
     </div>
   </div>
 </div>
@@ -20,74 +20,39 @@
 </h5>
 <div class="row">
   <div class="input-group">
-    <div class="col-auto">
+    <select class="custom-select col-auto rounded dress" id="exercise">
+      <option selected>Choose...</option>
+      {{#each exercise}}
+      <option>{{name}}</option>
+      {{/each}}
+      {{!-- Hard coded test option --}}
+      <option>test</option>
+    </select>
+    {{!-- <div class="col-auto">
       <input type="text" class="form-control rounded" placeholder="Exercise" id="exercise">
-    </div>
+    </div> --}}
     <div class="col-2">
-      <input type="text" class="form-control rounded" placeholder="Sets" id="sets">
+      <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Sets" id="sets">
     </div>
     <div class="col-3">
-      <input type="text" class="form-control rounded" placeholder="Reps" id="reps">
+      <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Reps" id="reps">
     </div>
-
-    <button type="button" class="btn rounded" id="addbtn">Add Exercise</button>
-
-
-    {{!-- <button class="col-auto" type="button">
-      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Exercise
-      </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        {{#each array_of_exercises }}
-        <a class="dropdown-item" href="#">{{this}}</a>
-        {{/each}}
-    </button>
-    <button class="col-3" type="button">Sets</button>
-    <button class="col-3" type="button">Reps</button> --}}
 
   </div>
 
-</div>
+  <button type="submit" class="btn rounded" style="height: 40px;" id="addBtn">Add Exercise</button>
 
-<div class="results container-fliud">
-{{!--   
-  <div class="row align-center plan">
-    <div class="col-auto">
-      <p class=""> Exercise </p>
-    </div>
-    <div class="col-2">
-      <p> Sets </p>
-    </div>
-    <div class="col-3">
-      <p> Reps </p>
-    </div>
-    <div class="col-2 col-md-1">
-      <button class="btn" type="button" id="delete">X</button>
-    </div>
+  <div class="results container-fliud"></div>
+
+  <div class="col-auto">
+    <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Name myRoutine"
+      id="newRoutine_name">
   </div>
-
-  <div class="row align-center plan">
-    <div class="col-auto">
-      <p class=""> Exercise </p>
-    </div>
-    <div class="col-2">
-      <p> Sets </p>
-    </div>
-    <div class="col-3">
-      <p> Reps </p>
-    </div>
-    <div class="col-2 col-md-1">
-      <button class="btn" type="button">X</button>
-    </div>
-  </div> --}}
 
   <div class="d-flex justify-content-center">
-    <button type="submit" id="newRoutine">Save myRoutine</button>
+    <button type="submit" class="btn rounded" style="height: 40px;" id="newRoutine">Save myRoutine</button>
   </div>
+  
+  {{!-- break --}}
 
-
-</div>
-
-
-<script src="/javascript/routine.js"></script>
+  <script src="/javascript/routine.js"></script>
