@@ -17,12 +17,32 @@ Routine.init(
       //false
       allowNull: false,
     },
+   
 
+    // set: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    //   defaultValue: 3,
+    //   validate: {
+    //     isNumeric: true // will only allow numbers
+    //   }
+    // },
+
+   
+    
+    // repetition: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    //   defaultValue: 10,
+    //   validate: {
+    //     isNumeric: true // will only allow numbers
+    //   }
+    // },
+    // array of excerId
     array_of_exercises: {
       type: DataTypes.JSON,
       //false
       allowNull: false,
-
     },
     // duration_min: {
     //   type: DataTypes.INTEGER,
