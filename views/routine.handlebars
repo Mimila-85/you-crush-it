@@ -2,7 +2,7 @@
 <h4 class="text-center">myRoutines</h4>
 <div class="row text-center">
   <div class="input-group">
-    <select class="custom-select col-auto" id="inputGroupSelect01">
+    <select class="custom-select col-auto rounded" id="inputGroupSelect01">
       <option selected>Choose...</option>
       {{#each routine}}
       <option>{{name_routine}}</option>
@@ -11,24 +11,27 @@
       <option value="3">Three</option> --}}
     </select>
     <div class="input-group-append col-3">
-      <button class="btn" type="button">GO</button>
+      <button class="btn rounded" type="button" id="go">GO</button>
     </div>
   </div>
 </div>
-<h5 class="text-center">
+<h5 class="text-center rounded">
   Create New Routine
 </h5>
 <div class="row">
   <div class="input-group">
     <div class="col-auto">
-      <input type="text" class="form-control" placeholder="Exercise">
+      <input type="text" class="form-control rounded" placeholder="Exercise" id="exercise">
     </div>
     <div class="col-2">
-      <input type="text" class="form-control col-2" placeholder="Sets">
+      <input type="text" class="form-control rounded" placeholder="Sets" id="sets">
     </div>
     <div class="col-3">
-      <input type="text" class="form-control col-2" placeholder="Reps">
+      <input type="text" class="form-control rounded" placeholder="Reps" id="reps">
     </div>
+
+    <button type="button" class="btn rounded" id="addbtn">Add Exercise</button>
+
 
     {{!-- <button class="col-auto" type="button">
       <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
@@ -45,10 +48,46 @@
 
   </div>
 
+</div>
+
+<div class="results container-fliud">
+{{!--   
+  <div class="row align-center plan">
+    <div class="col-auto">
+      <p class=""> Exercise </p>
+    </div>
+    <div class="col-2">
+      <p> Sets </p>
+    </div>
+    <div class="col-3">
+      <p> Reps </p>
+    </div>
+    <div class="col-2 col-md-1">
+      <button class="btn" type="button" id="delete">X</button>
+    </div>
+  </div>
+
+  <div class="row align-center plan">
+    <div class="col-auto">
+      <p class=""> Exercise </p>
+    </div>
+    <div class="col-2">
+      <p> Sets </p>
+    </div>
+    <div class="col-3">
+      <p> Reps </p>
+    </div>
+    <div class="col-2 col-md-1">
+      <button class="btn" type="button">X</button>
+    </div>
+  </div> --}}
+
+  <div class="d-flex justify-content-center">
+    <button type="submit" id="newRoutine">Save myRoutine</button>
+  </div>
 
 
 </div>
-<div class="d-flex justify-content-center">
-  <button type="submit">Save myRoutine</button>
-</div>
+
+
 <script src="/javascript/routine.js"></script>

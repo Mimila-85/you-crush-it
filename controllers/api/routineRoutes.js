@@ -37,6 +37,14 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+router.get("/routine", withAuth, async (req, res) => {
+  Routine.findAll({
+    where: {
+      user_id: req.session.user_id,
+    }
+  });
+});
+
 router.put("/:id", withAuth, async (req, res) => {
   try {
     const updateRoutine = await Routine.update(

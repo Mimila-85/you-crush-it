@@ -94,7 +94,7 @@ router.get("/workout", withAuth, async (req, res) => {
           include: [
             {
               model: Routine,
-              attributes: ["name_routine", "set", "repetition", "duration_min"],
+              attributes: ["name_routine", "array_of_exercises"],
               include: [
                 {
                   model: Exercise,

@@ -1,40 +1,42 @@
 async function newFormHandler(event) {
   event.preventDefault();
   const name_routine = document.querySelector('#routine_name').value;
-  const array_of_exercises = [
-    // {
-    //   type: "Pushups",
-    //   sets: 3,
-    //   repetition: 10,
-    // },
-    // {
-    //   type: "Pushups",
-    //   sets: document.querySelector('#routine_name').value,
-    //   repetition: 10,
-    // },
-  ];
- 
+  const array_of_exercises = [];
+
   const response = await fetch(`/api/routine`, {
     method: 'POST',
     body: JSON.stringify({
       name_routine,
       array_of_exercises,
     }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
+
   });
+
   //if the routine is added, the 'all' template will be rerendered
   if (response.ok) {
     document.location.replace('/');
   } else {
     console.log(response.json());
-    
-    alert('Failed to add routine');
-  }
-}
 
-document.querySelector('.routine-form').addEventListener('submit', newFormHandler);
+    alert('Failed to add routine');
+  };
+
+
+};
+
+// Send a POST request to the API endpoint
+// const response = fetch('/api/', {
+//   method: 'POST',
+//   body: JSON.stringify({ email, password }),
+//   headers: { 'Content-Type': 'application/json' },
+// });
+
+
+// const request = fetch('/api/routine', {
+//   method: 'GET',
+// });
+
+// document.querySelector('.routine-form').addEventListener('submit', newFormHandler);
 
 // var selectedOption = "";
 
@@ -43,52 +45,53 @@ document.querySelector('.routine-form').addEventListener('submit', newFormHandle
 //     $(".option").text($(this).text());
 // });
 
+async function routineFormHandler(event) {
+  event.preventDefault();
 
-        //     // main div where I am dumping other divs and p tags
-        //     var myDiv = $("<div>");
-        //     myDiv.attr("id", `${bizname}`);
-        //     myDiv.attr("class", "cell small-2 medium-cell-block-container btnGroup myDiv");
+  // $("#addbtn").on("click", function (event) {
+  //   event.preventDefault();
+  //   console.log("clicked");
+    // input by user
+    var exercise = $("#exercise").val();
+    var sets = $("#sets").val();
+    var reps = $("#reps").val();
 
-        //     // framework div
-        //     var frameworkDiv = $("<div>");
-        //     frameworkDiv.attr("class", "grid-x")
+    // append values to #results row in html with appropriate ids
 
-        //     //thumbnail div
-        //     var thumbnail = $("<div>");
-        //     thumbnail.attr("class", "small-3");
-        //     var img = $("<img>");
-        //     img.attr("class", "thumbnail").attr("src", `${imgURL}`).attr("id", "thumb");
-        //     thumbnail.append(img);
+    // main div where I am dumping other divs
+    var myDiv = $("<div>");
+    myDiv.attr("class", "row align-center plan");
 
-        //     // p tag with business name
-        //     var p = $("<p>");
-        //     p.attr("class", "small-6");
-        //     // p.attr("id", "");
-        //     p.text(`${bizname}`);
+    //exercise div
+    var plannedExercise = $("<div>");
+    var p = $("<p>");
+    p.text(exercise);
+    plannedExercise.attr("class", "col-auto");
 
-        //     // third div
-        //     var ratingDisplay = $("<div>");
-        //     // var reviewCount = $("<p>").text(reviewCount);
-        //     ratingDisplay.attr("class", "small-3");
-        //     var rateImg = $("<img>");
-        //     rateImg.attr("class", "rating").attr("id","stars");
 
-        //     if (rating == 4) {
-        //         rateImg.attr("src", "./assets/small_4.png");
-        //     } else if (rating == 4.5) {
-        //         rateImg.attr("src", "./assets/small_4_half.png");
-        //     } else {
-        //         rateImg.attr("src", "./assets/small_5.png");
-        //     }
-        //     ratingDisplay.append(rateImg);
-        //     // ratingDisplay.append(reviewCount);
+    // sets div
+    var plannedSets = $("<div>");
+    plannedSets.attr("class", "col-3");
 
-        //     // append everthing to main div
-        //     frameworkDiv.append(thumbnail);
-        //     frameworkDiv.append(p);
-        //     frameworkDiv.append(ratingDisplay);
 
-        //     myDiv.append(frameworkDiv);
+    // reps div
+    var plannedReps = $("<div>");
+    plannedReps.attr("class", "col-2");
 
-        //     $("#results").append(myDiv);     
-        // };
+
+    // append everthing to results div
+    plannedExercise.append(p);
+    myDiv.append(plannedExercise);
+    myDiv.append(plannedSets);
+    myDiv.append(plannedReps);
+
+    $("#results").append(myDiv);
+
+    // let plan = [];
+    // plan.push(exercise);
+    // plan.push(sets);
+    // plan.push(reps);
+    // array_of_exercises.push(plan);
+  // });
+};
+document.querySelector('#addbtn').addEventListener('submit', routineFormHandler);

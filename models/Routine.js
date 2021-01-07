@@ -17,7 +17,7 @@ Routine.init(
     },
 
     array_of_exercises: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
 
     },
