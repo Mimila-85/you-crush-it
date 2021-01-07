@@ -5,9 +5,7 @@ const withAuth = require("../../utils/auth")
 router.post("/", async (req, res) => {
   try {
     const newRoutine = await Routine.create({
-      // ...req.body,
-      name_routine: req.body.name_routine,
-      array_of_exercises: JSON.stringify(req.body.array_of_exercises),
+      ...req.body,
       user_id: req.session.user_id,
     });
 
