@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Routine extends Model { }
+class Routine extends Model {}
 
 Routine.init(
   {
@@ -15,6 +15,7 @@ Routine.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+   
 
     // set: {
     //   type: DataTypes.INTEGER,
@@ -25,6 +26,8 @@ Routine.init(
     //   }
     // },
 
+   
+    
     // repetition: {
     //   type: DataTypes.INTEGER,
     //   allowNull: true,
@@ -33,12 +36,10 @@ Routine.init(
     //     isNumeric: true // will only allow numbers
     //   }
     // },
-
     // array of excerId
     array_of_exercises: {
       type: DataTypes.TEXT,
       allowNull: false,
-
     },
     // duration_min: {
     //   type: DataTypes.INTEGER,

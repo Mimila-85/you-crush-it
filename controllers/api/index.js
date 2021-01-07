@@ -4,7 +4,7 @@ const routineRoutes = require("./routineRoutes");
 const workoutRoutes = require("./workoutRoutes");
 
 router.use("/users", userRoutes);
-router.use("/routine", routineRoutes);
+router.use("/myroutine", routineRoutes);
 router.use("/workout", workoutRoutes);
 
 module.exports = router;
