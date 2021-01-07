@@ -15,11 +15,11 @@ const seedDatabase = async () => {
     returning: true,
   });
   console.log("----- USER SEEDED -----");
-  await Routine.bulkCreate(routineData);
+  // await Routine.bulkCreate(routineData);
   console.log("----- ROUTINE SEEDED -----");
   await Exercise.bulkCreate(exerciseData);
   console.log("----- EXERCISE SEEDED -----");
-  await RoutineExercise.bulkCreate(routineExerciseData);
+  // await RoutineExercise.bulkCreate(routineExerciseData);
   console.log("----- ROUTINEEXERCISE SEEDED -----");
 
   process.exit(0);
