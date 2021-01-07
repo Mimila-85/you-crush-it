@@ -1,103 +1,33 @@
 [
     {
         "name_routine": "Upper Body",
-       
         "user_id": 1,
         "array_of_exercises": [
             {
                 "name": "Pushups",
                 "sets": 3,
-                "repetition": 10
+                "reps": 10
             },
             {
                 "name": "Bench Press",
                 "sets": 3,
-                "repetition": 10
+                "reps": 10
             }
         ]
     },
     {
-        "name_routine": "Upper Body",
-       
+        "name_routine": "Lower Body",
         "user_id": 1,
         "array_of_exercises": [
             {
-                "name": "Pushups",
+                "name": "Squats",
                 "sets": 3,
-                "repetition": 10
+                "reps": 10
             },
             {
-                "name": "Bench Press",
+                "name": "Lunges",
                 "sets": 3,
-                "repetition": 10
-            }
-        ]
-    },
-    {
-        "name_routine": "Upper Body",
-       
-        "user_id": 1,
-        "array_of_exercises": [
-            {
-                "name": "Pushups",
-                "sets": 3,
-                "repetition": 10
-            },
-            {
-                "name": "Bench Press",
-                "sets": 3,
-                "repetition": 10
-            }
-        ]
-    },
-    {
-        "name_routine": "Upper Body",
-       
-        "user_id": 1,
-        "array_of_exercises": [
-            {
-                "name": "Pushups",
-                "sets": 3,
-                "repetition": 10
-            },
-            {
-                "name": "Bench Press",
-                "sets": 3,
-                "repetition": 10
-            }
-        ]
-    },
-    {
-        "name_routine": "Upper Body",
-       
-        "user_id": 1,
-        "array_of_exercises": [
-            {
-                "name": "Pushups",
-                "sets": 3,
-                "repetition": 10
-            },
-            {
-                "name": "Bench Press",
-                "sets": 3,
-                "repetition": 10
-            }
-        ]
-    },
-    {
-        "name_routine": "Upper Body",
-       
-        "user_id": 1,
-        "array_of_exercises": [
-            {
-                "name": "Pushups",
-                "sets": 3,
-                "repetition": 10
-            },
-            {
-                "name": "Bench Press",
-                "sets": 3,
-                "repetition": 10
+                "reps": 10
             }
         ]
     }
