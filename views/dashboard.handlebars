@@ -3,6 +3,9 @@
     <h2>Dashboard</h2>
   </div>
   <div id="history">
+    {{#each workouts}}
+    <div>{{this.routine.name_routine}} {{this.date}}</div>
+    {{/each}}
 
   </div>
   <div>
@@ -16,5 +19,6 @@
 
 </div>
 
-<script src="/javascript/dashboard.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="/javascript/dashboard.js"></script>
