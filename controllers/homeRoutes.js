@@ -55,10 +55,12 @@ router.get("/routine", withAuth, async (req, res) => {
       include: [
         { 
           model: Routine,
+          attributes: ["name_routine"],
          }
       ],
     });
     const exercise = exerciseData.map((exercise) => exercise.get({ plain: true }));
+    console.log(exercise);
     res.render("routine", {
       exercise,
       logged_in: req.session.logged_in
