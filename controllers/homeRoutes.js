@@ -51,18 +51,20 @@ router.get("/dashboard", withAuth, async (req, res) => {
 // Use withAuth middleware to prevent access to route
 router.get("/routine", withAuth, async (req, res) => {
   try {
-    const exerciseData = await Exercise.findAll ({
-      include: [
-        { 
-          model: Routine,
-          attributes: ["name_routine"],
-         }
-      ],
+
+    const exerciseData = await Exercise.findAll ();
+    const exercises = exerciseData.map((exercise) => exercise.get({ plain: true }));
+
+    const routineData = await Routine.findAll({
+      where: {
+        user_id: req.session.user_id
+      }
     });
-    const exercise = exerciseData.map((exercise) => exercise.get({ plain: true }));
-    console.log(exercise);
+    const routines = routineData.map((routine) => routine.get({ plain: true }));
+
     res.render("routine", {
-      exercise,
+      exercises,
+      routines,
       logged_in: req.session.logged_in
     });
   } catch (err) {
