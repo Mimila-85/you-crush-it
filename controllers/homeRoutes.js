@@ -34,18 +34,11 @@ router.get("/dashboard", withAuth, async (req, res) => {
       include: [
         { 
           model: Workout,
-          attributes: [ "array_of_results", "date" ],
-          include: [
-            {
-              model: Routine,
-              attributes: ["name_routine"]
-            }
-          ]
+          attributes: [ "array_of_results" ],
          }
       ],
     });
     const user = userData.get({ plain: true });
-    console.log(user)
     res.render("dashboard", {
       ...user,
       logged_in: true
@@ -79,6 +72,30 @@ router.get("/routine", withAuth, async (req, res) => {
     res.status(500).json(err.message);
   }
 });
+
+// Use withAuth middleware to prevent access to route
+router.get("/routine/:id", withAuth, async (req, res) => {
+  try {
+    const routineData = await Routine.findByPk(req.params.id, {
+      include: [
+        {
+          model: Exercise,
+          attributes: ["name"],
+        }
+      ]
+    });
+    const routine = routineData.get({ plain: true });
+    res.render("workout", {
+      routine,
+      logged_in: req.session.logged_in
+    });
+    
+  } catch (err) {
+    // Server error response 500 - Internal Server Error
+    res.status(500).json(err.message);
+  }
+});
+
 // Use withAuth middleware to prevent access to route
 router.get("/workout", withAuth, async (req, res) => {
   try {
