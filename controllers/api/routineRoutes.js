@@ -49,7 +49,7 @@ router.get("/", async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get("/routine/:id", withAuth, async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
     const routineData = await Routine.findByPk(req.params.id, {
       include: [
