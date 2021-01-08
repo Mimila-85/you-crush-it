@@ -1,42 +1,47 @@
 let plan = [];
 let array_of_exercises = [];
 
-
+//POST NEW ROUTINE
 async function newRoutineHandler(event) {
   event.preventDefault();
   let name_routine = document.querySelector('#newRoutineName').value;
-  if (name_routine == null) {
-    alert("Give this myRoutine a Name :)")
+  if (!name_routine) {
+    alert("Give this myRoutine a Name :)");
   } else {
     const response = await fetch(`/api/routine`, {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         name_routine,
         array_of_exercises,
       }),
 
     });
-
     if (response.ok) {
       document.location.replace('/');
       console.log(response.json());
+      if (confirm("New myRoutine added!! Would you like to workout now?")) {
+        console.log("y");
+        window.open("/workout", "_self")
+    
+      } else {
+        console.log("n");
+        window.open("/routine", "_self")
+      };
     } else {
       alert('Failed to add routine');
     };
     console.log(array_of_exercises);
   };
   saveToStorage();
-  if (confirm("New myRoutine added!! Would you like to workout now?")) {
-    console.log("y");
-    window.open("/workout", "_self")
-
-  } else {
-    console.log("n");
-    window.open("/routine", "_self")
-  };
+ 
 };
 
 document.querySelector('#newRoutine').addEventListener('click', newRoutineHandler);
+
+//BUILD ROUTINE
 
 async function routineFormHandler(event) {
   event.preventDefault();

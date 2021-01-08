@@ -3,11 +3,9 @@
   <div class="input-group">
     <select class="custom-select col-auto rounded" style="height: 40px;" id="savedRoutine">
       <option selected>Choose...</option>
-      {{#each routine}}
-      <option>{{name_routine}}</option>
+      {{#each routines}}
+      <option data-routineId="{{id}}">{{name_routine}}</option>
       {{/each}}
-      {{!-- Hard coded test option --}}
-      <option>test</option>
     </select>
     <div class="input-group-append col-3">
       {{!-- <button class="btn rounded" style="height: 40px;" type="submit" id="go" href="/workout">GO</button> --}}
@@ -22,7 +20,7 @@
   <div class="input-group">
     <select class="custom-select col-auto rounded dress" id="exercise">
       <option selected>Choose...</option>
-      {{#each exercise}}
+      {{#each exercises}}
       <option>{{name}}</option>
       {{/each}}
       {{!-- Hard coded test option --}}
