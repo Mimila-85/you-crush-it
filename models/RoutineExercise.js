@@ -10,7 +10,15 @@ RoutineExercise.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    }
+    },
+    routine_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    exercise_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
   },
   {
     sequelize,

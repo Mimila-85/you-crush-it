@@ -81,7 +81,7 @@ async function routineFormHandler(event) {
     delDiv.append(delBtn);
 
 
-    // append everthing to results div
+    // append everything to results div
     plannedExercise.html(p);
     // console.log("inserted p element")
     myDiv.append(plannedExercise);
@@ -100,12 +100,19 @@ async function routineFormHandler(event) {
     plan.push({ "sets": sets });
     plan.push({ "reps": reps });
     let pod = Object.assign({}, plan);
-    array_of_exercises.push(pod);
+
+
+
+    array_of_exercises.push({
+      name: exercise,
+      sets: sets,
+      reps: reps,
+    });
 
     console.log(plan);
     console.log(pod);
     console.log(name_routine);
-    console.log(array_of_exercises);
+    console.log({ array_of_exercises });
   };
 
 };

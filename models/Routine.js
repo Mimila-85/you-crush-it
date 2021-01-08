@@ -17,21 +17,13 @@ Routine.init(
       //false
       allowNull: false,
     },
-
+    // array of excerId
     array_of_exercises: {
       type: DataTypes.JSON,
       //false
       allowNull: false,
-
     },
-    // duration_min: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: true,
-    //   defaultValue: 30,
-    //   validate: {
-    //     isNumeric: true // will only allow numbers
-    //   }
-    // },
+    
     user_id: {
       type: DataTypes.INTEGER,
       references: {

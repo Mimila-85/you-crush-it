@@ -2,22 +2,6 @@ const router = require("express").Router();
 const { Routine } = require("../../models");
 const withAuth = require("../../utils/auth")
 
-// router.post("/", async (req, res) => {
-//   try {
-//     const newRoutine = await Routine.create({
-//       // ...req.body,
-//       name_routine: req.body.name_routine,
-//       //removed stringify
-//       array_of_exercises: (req.body.array_of_exercises),
-//       user_id: req.session.user_id,
-//     });
-
-//     res.status(200).json(newRoutine);
-//   } catch (err) {
-//     res.status(400).json(err.message);
-//   }
-// });
-
 router.post("/", async (req, res) => {
   try {
     const newRoutine = await Routine.create({
@@ -50,9 +34,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-router.get("/", 
-// withAuth,
-async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     Routine.findAll({
       where: {
