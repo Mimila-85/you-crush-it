@@ -7,10 +7,17 @@ async function fetchinguserdata(){
     }
   });
 
- const workout = await response.json();
- console.log(workout);
+ const work = await response.json();
+ console.log(work);
 }
 
+// for (let i=0; i<workouts.workouts.length; i++){
+// const rep = workouts.workouts[i].routine.array_of_exercises[i].reps
+// const set = workouts.workouts[i].routine.array_of_exercises[i].set
+// const subTotal = rep*set    
+// }
+
+// console.log(subTotal)
 fetchinguserdata();
 
 

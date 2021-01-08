@@ -70,7 +70,7 @@ router.get("/", withAuth, async (req, res) => {
       include: [
         { 
           model: Workout,
-          attributes: [ "date" ],
+          attributes: [ "date", "array_of_results" ],
           include: [
             {
               model: Routine,

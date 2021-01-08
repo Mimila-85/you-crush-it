@@ -4,7 +4,7 @@
   </div>
   <div id="history">
     {{#each workouts}}
-    <div>{{this.routine.name_routine}} {{this.date}}</div>
+    <div>{{this.routine.name_routine}} {{format_date this.date}}</div>
     {{/each}}
 
   </div>
