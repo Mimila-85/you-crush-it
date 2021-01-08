@@ -6,7 +6,7 @@ const exercisesRoutes = require("./exercisesRoutes");
 
 
 router.use("/users", userRoutes);
-router.use("/myroutine", routineRoutes);
+router.use("/routine", routineRoutes);
 router.use("/workout", workoutRoutes);
 router.use("/exercises", exercisesRoutes);
 

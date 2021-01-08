@@ -34,9 +34,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-router.get("/", 
-// withAuth,
-async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     Routine.findAll({
       where: {

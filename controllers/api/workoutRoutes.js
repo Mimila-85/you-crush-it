@@ -2,9 +2,7 @@ const router = require("express").Router();
 const { Workout, User, Routine, Exercise } = require("../../models");
 const withAuth = require("../../utils/auth")
 
-router.post("/", 
-// withAuth,
-async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   try {
     const newWorkout = await Workout.create({
       ...req.body,
@@ -17,9 +15,7 @@ async (req, res) => {
   }
 });
 
-router.delete("/:id", 
-// withAUth,
-async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     const workoutDelete = await Workout.destroy({
       where: {
@@ -39,8 +35,7 @@ async (req, res) => {
   }
 });
 
-router.put("/:id", 
-// withAuth, 
+router.put("/:id", withAuth , 
 async (req, res) => {
   try {
     const updateWorkout = await Workout.update(
@@ -59,7 +54,7 @@ async (req, res) => {
       res.status(404).json({ message: "No workout found with this id!" });
       return;
     }
-    // Sucess response 200 - OK
+    // Success response 200 - OK
     res.status(200).json(updateWorkout);
   } catch (err) {
     // Client error response 400 - Bad request
