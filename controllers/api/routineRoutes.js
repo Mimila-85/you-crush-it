@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Routine } = require("../../models");
+const { Routine, Exercise } = require("../../models");
 const withAuth = require("../../utils/auth")
 
 router.post("/", withAuth, async (req, res) => {
@@ -34,15 +34,37 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-router.get("/", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    Routine.findAll({
+    const routineData = await Routine.findAll({
       where: {
         user_id: req.session.user_id,
       }
     });
+    const routines = routineData.map((routine) => routine.get({ plain: true }));
+    res.json(routines);
   } catch (err) {
     res.status(400).json(err.message);
+  }
+});
+
+// Use withAuth middleware to prevent access to route
+router.get("/routine/:id", withAuth, async (req, res) => {
+  try {
+    const routineData = await Routine.findByPk(req.params.id, {
+      include: [
+        {
+          model: Exercise,
+          attributes: ["name"],
+        }
+      ]
+    });
+    const routine = routineData.get({ plain: true });
+    res.json(routine);
+    
+  } catch (err) {
+    // Server error response 500 - Internal Server Error
+    res.status(500).json(err.message);
   }
 });
 
