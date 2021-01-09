@@ -57,13 +57,15 @@ async function routineFormHandler(event) {
     // append values to #results row in html with appropriate ids
     // main div where I am dumping other divs
     var myDiv = $("<div>");
-    myDiv.attr("class", "row align-center plan");
+    myDiv.attr("class", "row align-middle text-center plan");
 
     //exercise div
     var plannedExercise = $("<div>");
     var p = $("<p>");
+    p.attr("class", "align-middle")
+    // p.attr("style", "margin-top: 8%;",)
     p.text(exercise);
-    plannedExercise.attr("class", "col-auto");
+    plannedExercise.attr("class", "col-auto align-middle");
 
 
     // sets div

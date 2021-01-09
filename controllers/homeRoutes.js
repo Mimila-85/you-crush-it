@@ -97,36 +97,25 @@ router.get("/routine", withAuth, async (req, res) => {
 // });
 
 // Use withAuth middleware to prevent access to route
-router.get("/workout", withAuth, async (req, res) => {
+router.get("/workout/:id", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ["password", "email"] },
+    const workoutData = await Workout.findOne( {
+      attributes:["array_of_results"],
       include: [
-        { 
-          model: Workout,
-          attributes: [ "date" ],
-          include: [
-            {
-              model: Routine,
-              attributes: ["name_routine", "array_of_exercises"],
-              include: [
                 {
-                  model: Exercise,
-                  attributes: ["name"]
+                  model: Routine,
+                  attributes: ["name_routine"],
                 }
-              ]
-            }
-          ]
-        }
-      ],
+              ],
       where: {
-        routine_id: req.routine_id
+        routine_id: req.params.id,
       }
     });
-    const user = userData.get({ plain: true });
+    const workout = workoutData.get({ plain: true });
+    console.log(workout);
     res.render("workout", {
-      ...user,
+      ...workout,
       logged_in: true
     });
   } catch (err) {

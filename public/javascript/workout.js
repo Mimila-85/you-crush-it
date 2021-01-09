@@ -1,7 +1,7 @@
 const newWorkout = async (event) => {
   event.preventDefault();
 
-  const routine_id = $("#savedRoutine option:selected").attr("data-routineId");
+  const routine_id = $("#savedRoutine option:selected").val();
   console.log(routine_id);
   const response = await fetch(`/api/routine/${routine_id}`, {
     method: "GET",
@@ -26,9 +26,9 @@ const newWorkout = async (event) => {
     });
 
     if (responseWorkout.ok) {
-      document.location.replace("/workout");
+      document.location.replace(`/workout/${routine_id}`);
     } else {
-      alert("Failed to create workout");
+      alert("Please Select myRoutine :)");
     }
   };
   buildWorkOut();

@@ -1,14 +1,17 @@
-{{!--
-<Span class="routine">{{routine_id}}</Span>
+
+<h2 class="routine text-center">{{routine.name_routine}}</h2>
 {{#each array_of_results}}
 <div class="row segment">
-  <div class="">{{name}}</div>
-  <div class="">{{reps}}</div>
-  <div class="">{{sets}}</div>
+  <div class="col-auto">{{this.name}}</div>
+  <div class="col-3">{{this.reps}}</div>
+  <div class="col-3">{{this.sets}}</div>
+  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
+    style="margin-top: auto;">
 </div>
+<br>
 {{/each}}
-</div> --}}
-<div class="routine text-center">
+</div>
+{{!-- <div class="routine text-center">
   <h2 class="text-center">Custom myRoutine</h2>
 </div>
 <br>
@@ -135,4 +138,4 @@
   <div class="col-3">10</div>
   <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
     style="margin-top: auto;">
-</div>
+</div> --}}
