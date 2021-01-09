@@ -68,22 +68,22 @@ async function routineFormHandler(event) {
 
     // sets div
     var plannedSets = $("<div>");
-    plannedSets.attr("class", "col-3");
+    plannedSets.attr("class", "col-2");
     plannedSets.text(sets);
 
 
     // reps div
     var plannedReps = $("<div>");
-    plannedReps.attr("class", "col-3");
+    plannedReps.attr("class", "col-2");
     plannedReps.text(reps);
 
     //delete button div
-    var delBtn = $("<button>");
-    var delDiv = $("<div>");
-    delDiv.attr("class", "col-1 rounded");
-    delBtn.attr("class", "btn rounded")
-    delBtn.text("X");
-    delDiv.append(delBtn);
+    // var delBtn = $("<button>");
+    // var delDiv = $("<div>");
+    // delDiv.attr("class", "col-1 rounded");
+    // delBtn.attr("class", "btn rounded")
+    // delBtn.text("X");
+    // delDiv.append(delBtn);
 
 
     // append everything to results div
@@ -95,7 +95,7 @@ async function routineFormHandler(event) {
     // console.log("appended Set")
     myDiv.append(plannedReps);
     // console.log("appended Reps")
-    myDiv.append(delDiv);
+    // myDiv.append(delDiv);
 
     $(".results").append(myDiv);
 
