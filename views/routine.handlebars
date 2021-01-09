@@ -4,12 +4,12 @@
     <select class="custom-select col-auto rounded" style="height: 40px;" id="savedRoutine">
       <option selected>Choose...</option>
       {{#each routines}}
-      <option data-routineId="{{id}}">{{name_routine}}</option>
+      <option value="{{id}}">{{name_routine}}</option>
       {{/each}}
     </select>
     <div class="input-group-append col-3">
       {{!-- <button class="btn rounded" style="height: 40px;" type="submit" id="go" href="/workout">GO</button> --}}
-      <a href="/workout" class="button btn rounded" id="goBtn" style="height: 40px;">GO</a>
+      <a href="#" class="button btn rounded" id="goBtn" style="height: 40px;">GO</a>
     </div>
   </div>
 </div>
@@ -40,8 +40,15 @@
 
   <button type="submit" class="btn rounded" style="height: 40px;" id="addBtn">Add Exercise</button>
 
-  <div class="results container-fliud"></div>
-
+  <div class="results container-fluid align-bottom">
+    <div class="row align-bottom plan">
+      <div class="col-auto align-bottom">
+        <p class="align-bottom" style="">Bench Press</p>
+      </div>
+      <div class="col-2 align-bottom">3</div>
+      <div class="col-2 align-bottom">10</div>
+    </div>
+  </div>
   <div class="col-auto">
     <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Name myRoutine"
       id="newRoutineName">
@@ -50,9 +57,10 @@
   <div class="d-flex justify-content-center">
     <button type="submit" class="btn rounded" style="height: 40px;" id="newRoutine">Save myRoutine</button>
   </div>
-  
+
   {{!-- break --}}
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
   <script src="/javascript/routine.js"></script>
-<script src="/javascript/workout.js"></script>
+  <script src="/javascript/workout.js"></script>
