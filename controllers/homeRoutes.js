@@ -34,11 +34,24 @@ router.get("/dashboard", withAuth, async (req, res) => {
       include: [
         { 
           model: Workout,
-          attributes: [ "array_of_results" ],
+          attributes: [ "array_of_results", "date" ],
+          include: [
+            {
+              model: Routine,
+              attributes: ["name_routine", "array_of_exercises"],
+              include: [
+                {
+                  model: Exercise,
+                  attributes: ["name"]
+                }
+              ]
+            }
+          ]
          }
       ],
     });
     const user = userData.get({ plain: true });
+    console.log(user)
     res.render("dashboard", {
       ...user,
       logged_in: true
