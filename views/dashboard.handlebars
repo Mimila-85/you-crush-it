@@ -1,16 +1,80 @@
 <div class="card">
   <div class="card-header">
-    <h2>Dashboard</h2>
+    <h2 class="text-center" >Dashboard</h2>
   </div>
-  <div id="history">
-    {{#each workouts}}
-    <div>{{this.routine.name_routine}} {{this.date}}</div>
-    {{/each}}
+  <br>
+  <span class="text-center">Last Seven Workouts</span>
+  <br>
+  <div id="history" class="container">
+    <div class="row">
+      <div class="col-6 text-center">
+        <span>Chest</span>
+      </div>
+      <div class="col-6 text-center">
+        <span>01/01/2021</span>
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-6 text-center">
+        <span>Legs</span>
+      </div>
+      <div class="col-6 text-center">
+        <span>01/02/2021</span>
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-6 text-center">
+        <span>Back</span>
+      </div>
+      <div class="col-6 text-center">
+        <span>01/03/2021</span>
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-6 text-center">
+        <span>Core</span>
+      </div>
+      <div class="col-6 text-center">
+        <span>01/04/2021</span>
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-6 text-center">
+        <span>Shoulders</span>
+      </div>
+      <div class="col-6 text-center">
+        <span>01/05/2021</span>
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-6 text-center">
+        <span>Chest</span>
+      </div>
+      <div class="col-6 text-center">
+        <span>01/06/2021</span>
+      </div>
+    </div>
+           <div class="row">
+      <div class="col-6 text-center">
+        <span>Legs</span>
+      </div>
+      <div class="col-6 text-center">
+        <span>01/07/2021</span>
+      </div>
+    </div>
+    <br>
+    
+<br>
+{{!-- <span>Legs 01/02/2021</span>
+<span>Back 01/03/2021</span>
+<span>Core 01/04/2021</span>
+<span>Shoulders 01/05/2021</span>
+<span>Chest 01/06/2021</span>
+<span>Legs 01/07/2021</span> --}}
+
 
   </div>
-  <div>
-    <canvas id="myChart" width="400" height="400"></canvas>
-  </div>
+
 
   <div id="analytics">
     <canvas id="myChart"></canvas>
