@@ -20,16 +20,9 @@ async function newRoutineHandler(event) {
 
     });
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/routine');
+      alert("myRoutine Added"),
       console.log(response.json());
-      if (confirm("New myRoutine added!! Would you like to workout now?")) {
-        console.log("y");
-        window.open("/workout", "_self")
-    
-      } else {
-        console.log("n");
-        window.open("/routine", "_self")
-      };
     } else {
       alert('Failed to add routine');
     };
