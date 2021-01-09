@@ -40,7 +40,7 @@ async function fetchinguserdata() {
       labels: workoutData.dates,
       datasets: [
         {
-          label: "Your reps per month",
+          label: "Your reps per day",
           backgroundColor: "rgb(255, 99, 132)",
           borderColor: "rgb(255, 99, 132)",
           data: workoutData.totals,
