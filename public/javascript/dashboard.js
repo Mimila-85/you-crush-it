@@ -7,8 +7,13 @@ async function fetchinguserdata(){
     }
   });
 
- const workout = await response.json();
- console.log(workout);
+ const workouts = await response.json();
+ console.log(workouts);
+workouts.forEach(workout => {
+    rep = workouts.workouts.array_of_results.reps
+    console.log(rep)
+});
+
 }
 
 fetchinguserdata();
