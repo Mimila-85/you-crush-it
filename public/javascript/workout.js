@@ -1,3 +1,4 @@
+const test = true;
 const newWorkout = async (event) => {
   event.preventDefault();
 
