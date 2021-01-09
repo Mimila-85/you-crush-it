@@ -1,35 +1,57 @@
-async function fetchinguserdata(){
-    const response = await fetch('/api/workout', {
-    method: 'GET',
-    
+async function fetchinguserdata() {
+  const response = await fetch("/api/workout", {
+    method: "GET",
+
     headers: {
-      'Content-Type': 'application/json'
-    }
+      "Content-Type": "application/json",
+    },
   });
 
- const workout = await response.json();
- console.log(workout);
+  const { workouts } = await response.json();
+  console.log(workouts);
+
+  const workoutData = {
+    dates: [],
+    totals: [],
+  };
+
+  workouts.map((workout) => {
+    const array_of_results = workout.array_of_results;
+    console.log(array_of_results);
+
+    const totalReps = array_of_results.reduce((total, results) => {
+      return total + parseInt(results.sets) * parseInt(results.reps);
+    }, 0);
+
+    console.log({ totalReps });
+
+    workoutData.dates.push(new Date(workout.date).toLocaleDateString());
+    workoutData.totals.push(totalReps);
+  });
+  console.log({ workoutData });
+
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: "line",
+
+    // The data for our dataset
+    data: {
+      labels: workoutData.dates,
+      datasets: [
+        {
+          label: "Your reps per month",
+          backgroundColor: "rgb(255, 99, 132)",
+          borderColor: "rgb(255, 99, 132)",
+          data: workoutData.totals,
+        },
+      ],
+    },
+
+    // Configuration options go here
+    options: {},
+  });
 }
 
 fetchinguserdata();
 
-
-var ctx = document.getElementById('myChart').getContext('2d');
-var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
-
-    // The data for our dataset
-    data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-            label: 'Your reps per month',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 400, 350, 410, 480, 410, 445]
-        }]
-    },
-
-    // Configuration options go here
-    options: {}
-});
