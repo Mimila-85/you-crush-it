@@ -1,141 +1,50 @@
-
-<h2 class="routine text-center">{{routine.name_routine}}</h2>
-{{#each array_of_results}}
+<h2 class="routine text-center">{{name_routine}}</h2>
 <div class="row segment">
-  <div class="col-auto">{{this.name}}</div>
-  <div class="col-3">{{this.reps}}</div>
-  <div class="col-3">{{this.sets}}</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
+  <div class="col-5">Exercises</div>
+  <div class="col-2">Sets</div>
+  <div class="col-2">Reps</div>
+  <div class="col-2">Weight</div>
+  <div class="col-1">Done?</div>
 </div>
 <br>
+<form>
+  {{#each array_of_exercises}}
+  <div class="row segment workoutList">
+    <div class="col-5">
+      <div class="form-group">
+        <textarea class="form-control row-names" rows="2">{{this.name}}</textarea>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="form-group">
+        <textarea class="form-control row-sets" rows="1">{{this.sets}}</textarea>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="form-group">
+        <textarea class="form-control row-reps" rows="1">{{this.reps}}</textarea>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="form-group">
+        <textarea class="form-control row-weights" rows="1">{{this.weight}}</textarea>
+      </div>
+    </div>
+    <div class="col-1">
+      <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox align-bottom" checkId="{{@index}}"
+    style="margin-top: auto;">
+    </div>
+  </div>
+  <br>
 {{/each}}
+</form>
+
+<div class="col-3">
+  <button class="button btn rounded" id="updateBtn" updateId="{{id}}">Update Routine</i></button>
 </div>
-{{!-- <div class="routine text-center">
-  <h2 class="text-center">Custom myRoutine</h2>
+<div class="col-3">
+  <button class="button btn rounded" id="saveProgressBtn" saveId="{{id}}">Save Progress</button>
 </div>
-<br>
-<div class="row segment">
-  <div class="col-auto">EXERCISE</div>
-  <div class="col-3">SETS</div>
-  <div class="col-3">REPS</div>
-  <div class="col-1"></div>
+<div class="col-3">
+  <button class="button btn rounded" id="deleteBtn" deleteId="{{id}}">Delete Entire Routine</button>
 </div>
-<br>
-<div class="row segment">
-  <div class="col-auto">Bench Press</div>
-  <div class="col-3">3</div>
-  <div class="col-3">10</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
-</div>
-
-<br>
-
-<div class="row segment">
-  <div class="col-auto">Squats</div>
-  <div class="col-3">3</div>
-  <div class="col-3">10</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
-</div>
-
-<br>
-
-<div class="row segment">
-  <div class="col-auto">Deadlift</div>
-  <div class="col-3">5</div>
-  <div class="col-3">5</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
-</div>
-
-<br>
-
-<div class="row segment">
-  <div class="col-auto">Dumbell Fly</div>
-  <div class="col-3">4</div>
-  <div class="col-3">8</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
-</div>
-
-<br>
-
-<div class="row segment">
-  <div class="col-auto">Shoulder Press</div>
-  <div class="col-3">3</div>
-  <div class="col-3">10</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
-</div>
-
-<br>
-
-<div class="row segment">
-  <div class="col-auto">Butt Kickers</div>
-  <div class="col-3">5</div>
-  <div class="col-3">15</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
-</div>
-
-<br>
-
-<div class="row segment">
-  <div class="col-auto">Upright Row</div>
-  <div class="col-3">3</div>
-  <div class="col-3">10</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
-</div>
-
-<br>
-
-<div class="row segment">
-  <div class="col-auto">Push Ups</div>
-  <div class="col-3">3</div>
-  <div class="col-3">20</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
-</div>
-
-<br>
-
-<div class="row segment">
-  <div class="col-auto">Burpees</div>
-  <div class="col-3">5</div>
-  <div class="col-3">10</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
-</div>
-
-<br>
-
-<div class="row segment">
-  <div class="col-auto">Ab Crunches</div>
-  <div class="col-3">5</div>
-  <div class="col-3">10</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
-</div>
-
-<br>
-
-<div class="row segment">
-  <div class="col-auto">Lunges</div>
-  <div class="col-3">5</div>
-  <div class="col-3">10</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
-</div>
-
-<br>
-
-<div class="row segment">
-  <div class="col-auto">Situps</div>
-  <div class="col-3">5</div>
-  <div class="col-3">10</div>
-  <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox col-1 align-bottom"
-    style="margin-top: auto;">
-</div> --}}

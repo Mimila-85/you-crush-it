@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Routine, Exercise } = require("../../models");
+const { Routine } = require("../../models");
 const withAuth = require("../../utils/auth")
 
 router.post("/", withAuth, async (req, res) => {
@@ -51,14 +51,7 @@ router.get("/", async (req, res) => {
 // Use withAuth middleware to prevent access to route
 router.get("/:id", withAuth, async (req, res) => {
   try {
-    const routineData = await Routine.findByPk(req.params.id, {
-      include: [
-        {
-          model: Exercise,
-          attributes: ["name"],
-        }
-      ]
-    });
+    const routineData = await Routine.findByPk(req.params.id);
     const routine = routineData.get({ plain: true });
     res.json(routine);
     

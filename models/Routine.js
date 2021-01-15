@@ -23,7 +23,6 @@ Routine.init(
       //false
       allowNull: false,
     },
-    
     user_id: {
       type: DataTypes.INTEGER,
       references: {
