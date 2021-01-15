@@ -8,7 +8,6 @@
       {{/each}}
     </select>
     <div class="input-group-append col-3">
-      {{!-- <button class="btn rounded" style="height: 40px;" type="submit" id="go" href="/workout">GO</button> --}}
       <a href="#" class="button btn rounded" id="goBtn" style="height: 40px;">GO</a>
     </div>
   </div>
@@ -23,31 +22,21 @@
       {{#each exercises}}
       <option>{{name}}</option>
       {{/each}}
-      {{!-- Hard coded test option --}}
-      <option>test</option>
     </select>
-    {{!-- <div class="col-auto">
-      <input type="text" class="form-control rounded" placeholder="Exercise" id="exercise">
-    </div> --}}
-    <div class="col-2">
+    <div class="col">
       <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Sets" id="sets">
     </div>
-    <div class="col-3">
+    <div class="col">
       <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Reps" id="reps">
     </div>
-
+    <div class="col">
+      <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Weight" id="weight">
+    </div>
   </div>
 
   <button type="submit" class="btn rounded" style="height: 40px;" id="addBtn">Add Exercise</button>
 
   <div class="results container-fluid align-bottom">
-    {{!-- <div class="row align-bottom plan">
-      <div class="col-auto align-bottom">
-        <p class="align-bottom" style="">Bench Press</p>
-      </div>
-      <div class="col-2 align-bottom">3</div>
-      <div class="col-2 align-bottom">10</div>
-    </div> --}}
   </div>
   <div class="col-auto">
     <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Name myRoutine"
@@ -63,4 +52,3 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
   <script src="/javascript/routine.js"></script>
-  {{!-- <script src="/javascript/workout.js"></script> --}}
