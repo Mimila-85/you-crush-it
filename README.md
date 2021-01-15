@@ -1,5 +1,5 @@
 ![License](https://img.shields.io/badge/license-MIT-blue)
-# Employee Tracker
+# CRUSH IT
 ## Description
 Crush It! is a personal workout tracking application that will allow the user to setup an account, create a workout routine by selecting from a range of exercises, and track your progress compared to previous sessions.
 ## Table of Contents
