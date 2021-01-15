@@ -6,12 +6,14 @@
             {
                 "name": "Pushups",
                 "sets": 3,
-                "reps": 10
+                "reps": 10,
+                "weight": 50
             },
             {
                 "name": "Bench Press",
                 "sets": 3,
-                "reps": 10
+                "reps": 10,
+                "weight": 50
             }
         ]
     },
@@ -22,12 +24,14 @@
             {
                 "name": "Squats",
                 "sets": 3,
-                "reps": 10
+                "reps": 10,
+                "weight": 50
             },
             {
                 "name": "Lunges",
                 "sets": 3,
-                "reps": 10
+                "reps": 10,
+                "weight": 50
             }
         ]
     }
