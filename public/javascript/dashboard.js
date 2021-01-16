@@ -8,7 +8,7 @@ async function fetchinguserdata() {
   });
 
   const { workouts } = await response.json();
-  console.log(workouts);
+  // console.log(workouts);
 
   const workoutData = {
     dates: [],
@@ -17,18 +17,18 @@ async function fetchinguserdata() {
 
   workouts.map((workout) => {
     const array_of_results = workout.array_of_results;
-    console.log(array_of_results);
+    // console.log(array_of_results);
 
     const totalReps = array_of_results.reduce((total, results) => {
       return total + parseInt(results.sets) * parseInt(results.reps);
     }, 0);
 
-    console.log({ totalReps });
+    // console.log({ totalReps });
 
     workoutData.dates.push(new Date(workout.date).toLocaleDateString());
     workoutData.totals.push(totalReps);
   });
-  console.log({ workoutData });
+  // console.log({ workoutData });
 
   var ctx = document.getElementById("myChart").getContext("2d");
   var chart = new Chart(ctx, {
