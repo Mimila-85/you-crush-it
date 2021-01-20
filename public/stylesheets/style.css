@@ -96,15 +96,15 @@ p {
   font-size: 1.2rem;
 }
 .plan {
-  background-image: radial-gradient(white, #ff6384);
+  background-image: radial-gradient(white, grey);
 }
 .segment {
-  background-image: radial-gradient(white, #ff6384);
+  background-image: radial-gradient(white, grey);
 }
 
 input {
     width: 100%;
-    border: 1px solid #ff6384;
+    border: 1px solid grey;
     background: #FFF;
     margin: 0 0 5px;
     padding: 10px;
@@ -127,9 +127,9 @@ input {
   border-radius: var(--border-radius);
   color: var(--primary);
   border: 1px;
-  border-color: #ff6384;
+  border-color: grey;
   outline: 1px;
-  background-image: radial-gradient(white, #ff6384);
+  background-image: radial-gradient(white, grey);
   box-shadow: 3px 3px var(--dark);
   transform: translate(-1px, -1px);
 }
