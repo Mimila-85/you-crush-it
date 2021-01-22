@@ -10,17 +10,19 @@
   <link rel="stylesheet" href="../../stylesheets/style.css">
 </head>
 
-<body style="background-image" : "" ;>
+<body style="background-color" : "#225969" ;>
 
   <div>
 
     <div class="pos-f-t fixed-top">
       <div class="collapse" id="navbarToggleExternalContent">
-        <div class="text-white bg-dark p-4">
+        <div class="text-white p-4">
           <ul class="list-inline text-center">
 
             <li class="list-inline-item"><a class="text-white" href="/dashboard">Dashboard</a></li>
+            <li class="list-inline-item">|</li>
             <li class="list-inline-item"><a class="text-white" href="/routine">Routine</a></li>
+            <li class="list-inline-item">|</li>
 
             {{#if logged_in}}
             <li class="list-inline-item"><a class="text-white" href="#" id="logout-link">Logout</a></li>
@@ -32,13 +34,15 @@
         </div>
       </div>
       <div id="navcon">
-        <nav class="navbar navbar-dark bg-dark flex-row-reverse text-white text-center">
+        <nav class="navbar navbar-dark bg-dark flex-row-reverse text-white text-center" style="height: 60px;">
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
             aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <h3 class="text-white text-center" style="margin-left: auto; margin-right: auto;"> ...CRUSH IT!</h3>
+          
+          <img src="images/MWPTB.png" alt="logo">
+          {{!-- <h3 class="text-white text-center" style="margin-left: auto; margin-right: auto;"> ...CRUSH IT!</h3> --}}
           {{!-- <h3 class="text-white text-center" style="margin-left: auto; margin-right: auto;"> <img src="../../public/images/Logo 2.png" alt=""></h3> --}}
         </nav>
       </div>

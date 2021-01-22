@@ -20,13 +20,21 @@
 * {
   box-sizing: border-box;
 }
+img { 
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block; 
+} 
 
 body {
   
-  /* background-color: #317e94; */
+  background-image: linear-gradient(white,#ff6384);
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-weight: bold; */
   color: var(--dark);
   line-height: 1.5;
   font-size: 16px;
@@ -36,8 +44,8 @@ input[type='checkbox'] {
   -webkit-appearance:none;
   width:30px;
   height:30px;
-  background:white;
-  border-radius:5px;
+  background: white;
+  border-radius:4px;
   border:2px solid #ff6384;
   margin-top: 15px;
 }
@@ -99,12 +107,12 @@ p {
   background-image: radial-gradient(white, grey);
 }
 .segment {
-  background-image: radial-gradient(white, grey);
+  background-image: radial-gradient(white, #225969);
 }
 
 input {
     width: 100%;
-    border: 1px solid grey;
+    border: 1px solid black;
     background: #FFF;
     margin: 0 0 5px;
     padding: 10px;
@@ -119,24 +127,25 @@ input {
 }
 .btn {
   font-size: 1.3rem;
+  font-weight: bold;
   text-decoration: none;
   padding: 6px 5px;
   width: 100%;
   display: block;
   margin: 5px 0;
   border-radius: var(--border-radius);
-  color: var(--primary);
+  /* color: var(--primary); */
   border: 1px;
-  border-color: grey;
+  border-color: white;
   outline: 1px;
-  background-image: radial-gradient(white, grey);
+  background-image: radial-gradient(white, #225969);
   box-shadow: 3px 3px var(--dark);
   transform: translate(-1px, -1px);
 }
 
 .btn:hover {
-  color: var(--primary);
-  background-color: rgb(53, 53, 53);
+  /* color: var(--primary); */
+  background-color: whitesmoke;
   transform: translate(0, 0);
   box-shadow: 2px 2px var(--dark);
 }
@@ -152,8 +161,10 @@ input {
 .navbar {
   width: 100%;
   position: fixed;
-  background-color: var(--dark);
-  box-shadow: black;
+  background-image: linear-gradient( white, #225969);
+  background-size: cover;
+  /* background-color: var(--dark); */
+  box-shadow: #225969;
   z-index: 4;
 }
 
@@ -163,6 +174,10 @@ input {
 
 .nav-item a {
   color: var(--primary);
+}
+#navbarToggleExternalContent {
+  background-image: linear-gradient(#225969,#ff829d);
+
 }
 
 .hero {
