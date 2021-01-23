@@ -30,7 +30,8 @@ img {
 
 body {
   
-  background-image: linear-gradient(white,#ff6384);
+  /* background-image: linear-gradient(white,#ff6384); */
+  background-color: #FFF;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -104,10 +105,17 @@ p {
   font-size: 1.2rem;
 }
 .plan {
-  background-image: radial-gradient(white, grey);
+  background-image: linear-gradient(white,  #888888);
+ 
+  border:1px solid #ff6384;
 }
 .segment {
   background-image: radial-gradient(white, #225969);
+  /* background: #ff6384; */
+}
+
+.TT {
+  background-image: linear-gradient(white, #ff6384);
 }
 
 input {
@@ -164,8 +172,8 @@ input {
   background-image: linear-gradient( white, #225969);
   background-size: cover;
   /* background-color: var(--dark); */
-  box-shadow: #225969;
-  z-index: 4;
+  box-shadow: 0px 0px 10px 10px #888888;
+  z-index: 10;
 }
 
 .nav-item {
@@ -176,7 +184,7 @@ input {
   color: var(--primary);
 }
 #navbarToggleExternalContent {
-  background-image: linear-gradient(#225969,#ff829d);
+  background-image: linear-gradient(#225969,#888888);
 
 }
 
@@ -219,6 +227,12 @@ input {
 
 .list-item:hover {
   background-color: var(--dark);
+}
+
+footer {
+  background-image: linear-gradient(  #225969, white);
+  box-shadow: 0px 0px 10px 5px #888888;
+  z-index: 10;
 }
 
 .footer a {
@@ -347,4 +361,7 @@ input {
   margin-top: calc(var(--bs-gutter-y) * -1);
   margin-right: calc(var(--bs-gutter-x)/ -2);
   margin-left: calc(var(--bs-gutter-x)/ -2);
+}
+.custom-select {
+  background-color: #FFF;
 }
