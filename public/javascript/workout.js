@@ -95,7 +95,7 @@ const deleteRoutine = async () => {
   });
 
   if (response.ok) {
-    document.location.replace("/dashboard");
+    document.location.replace("/routine");
   } else {
     alert("Failed to delete routine");
   }

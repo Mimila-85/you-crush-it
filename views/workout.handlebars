@@ -1,16 +1,18 @@
-<h2 class="routine text-center">{{name_routine}}</h2>
-<div class="row segment">
-  <div class="col-5">Exercises</div>
-  <div class="col-2">Sets</div>
-  <div class="col-2">Reps</div>
-  <div class="col-2">Weight</div>
-  <div class="col-1">Done?</div>
+<div class="banner">
+  <h2 class="routine text-center">{{name_routine}}</h2>
+  <div class="row segment TT text-center">
+    <div class="col-4">Exercises</div>
+    <div class="col-2">Sets</div>
+    <div class="col-2">Reps</div>
+    <div class="col-2">Weight</div>
+    <div class="col-2"></div>
+  </div>
 </div>
 <br>
 <form>
   {{#each array_of_exercises}}
   <div class="row segment workoutList">
-    <div class="col-5">
+    <div class="col-4">
       <div class="form-group">
         <textarea class="form-control row-names" rows="2">{{this.name}}</textarea>
       </div>
@@ -30,21 +32,22 @@
         <textarea class="form-control row-weights" rows="1">{{this.weight}}</textarea>
       </div>
     </div>
-    <div class="col-1">
+    <div class="col-2 text-center">
       <input type="checkbox" data-ng-model="rememberMe" class="pull-right mycheckbox align-bottom" checkId="{{@index}}"
-    style="margin-top: auto;">
+        style="margin-top: 15px;">
     </div>
   </div>
   <br>
-{{/each}}
+  {{/each}}
 </form>
-
-<div class="col-3">
-  <button class="button btn rounded" id="updateBtn" updateId="{{id}}">Update Routine</i></button>
-</div>
-<div class="col-3">
-  <button class="button btn rounded" id="saveProgressBtn" saveId="{{id}}">Save Progress</button>
-</div>
-<div class="col-3">
-  <button class="button btn rounded" id="deleteBtn" deleteId="{{id}}">Delete Entire Routine</button>
+<div class="container-fluid">
+  <div class="row">
+    <button class="button btn rounded" id="updateBtn" updateId="{{id}}">Update Routine</button>
+  </div>
+  <div class="row">
+    <button class="button btn rounded" id="saveProgressBtn" saveId="{{id}}">Save Progress</button>
+  </div>
+  <div class="row">
+    <button class="button btn rounded" id="deleteBtn" deleteId="{{id}}">Delete Routine</button>
+  </div>
 </div>

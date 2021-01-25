@@ -17,20 +17,20 @@
 </h5>
 <div class="row">
   <div class="input-group">
-    <select class="custom-select col-7 rounded dress" id="exercise">
+    <select class="custom-select col-5 rounded dress" id="exercise">
       <option selected>Choose...</option>
       {{#each exercises}}
       <option>{{name}}</option>
       {{/each}}
     </select>
-    <div class="col">
-      <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Sets" id="sets">
+    <div class="col-2">
+      <input type="text" onfocus="this.value=''" class="form-control rounded" style="height: 40px;" placeholder="Sets" id="sets">
     </div>
-    <div class="col">
-      <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Reps" id="reps">
+    <div class="col-3">
+      <input type="text" onfocus="this.value=''" class="form-control rounded" style="height: 40px;" placeholder="Reps" id="reps">
     </div>
-    <div class="col">
-      <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Weight" id="weight">
+    <div class="col-2">
+      <input type="text" onfocus="this.value=''" class="form-control rounded" style="height: 40px;" placeholder="Wt." id="weight">
     </div>
   </div>
 
@@ -39,7 +39,7 @@
   <div class="results container-fluid align-bottom">
   </div>
   <div class="col-auto">
-    <input type="text" class="form-control rounded" style="height: 40px;" placeholder="Name myRoutine"
+    <input type="text" onfocus="this.value=''" class="form-control rounded" style="height: 40px;" placeholder="Name myRoutine"
       id="newRoutineName">
   </div>
 
