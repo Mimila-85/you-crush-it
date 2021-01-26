@@ -15,7 +15,12 @@ async function fetchinguserdata() {
     totals: [],
   };
 
-  workouts.map((workout) => {
+  let rev = workouts.reverse();
+  const last_seven = rev.slice(0, 7);
+  const revert = last_seven.reverse();
+  // console.log(revert);
+
+  revert.map((workout) => {
     const array_of_results = workout.array_of_results;
     // console.log(array_of_results);
 
@@ -25,8 +30,10 @@ async function fetchinguserdata() {
 
     // console.log({ totalReps });
 
+
     workoutData.dates.push(new Date(workout.date).toLocaleDateString());
     workoutData.totals.push(totalReps);
+
   });
   // console.log({ workoutData });
 
@@ -40,7 +47,7 @@ async function fetchinguserdata() {
       labels: workoutData.dates,
       datasets: [
         {
-          label: "Your reps per day",
+          label: "Total Reps",
           backgroundColor: "rgb(255, 99, 132)",
           borderColor: "rgb(255, 99, 132)",
           data: workoutData.totals,
@@ -51,6 +58,7 @@ async function fetchinguserdata() {
     // Configuration options go here
     options: {},
   });
+
 }
 
 fetchinguserdata();
