@@ -365,3 +365,9 @@ footer {
 .custom-select {
   background-color: #FFF;
 }
+#history {
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}

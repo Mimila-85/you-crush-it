@@ -15,6 +15,10 @@ const PORT = process.env.PORT || 3001;
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
 
+hbs.handlebars.registerHelper('reverse', function(arr) {
+  arr.reverse();
+})
+
 require("dotenv").config();
 
 const sess = {

@@ -1,11 +1,10 @@
-<div class="card">
+<div class="card container" style="max-height: 100vh;">
   <div class="card-header">
     <h2 class="text-center">Dashboard</h2>
   </div>
-  <br>
-  <span class="text-center">Last Seven Workouts</span>
-  <br>
-  <div id="history" class="container">
+
+  <div id="history" class="container col-12">
+    {{reverse workouts}}
     {{#each workouts}}
     <div class="row">
       {{#if this.routine.name_routine}}
@@ -22,20 +21,21 @@
       </div>
     </div>
     {{/each}}
-
+  </div>
+  <br>
+  <div class="text-center">
+    <span>Last Seven Workouts</span>
+  </div>
   <br>
 
-  <br>
-
+  <div id="analytics">
+    <canvas id="myChart"></canvas>
+  </div>
 </div>
 
 
-<div id="analytics">
-  <canvas id="myChart"></canvas>
 
-</div>
 
-</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
