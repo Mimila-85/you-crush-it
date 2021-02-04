@@ -1,13 +1,17 @@
-<div class="card">
+<div class="card container">
   <div class="card-header">
     <h2 class="text-center">Dashboard</h2>
   </div>
   <br>
-  <span class="text-center">Last Seven Workouts</span>
-  <br>
-  <div id="history" class="container">
+  <div class="text-center">
+    <span>Workout History</span>
+  </div>
+  
+
+  <div id="history" class="container col-12">
+    {{reverse workouts}}
     {{#each workouts}}
-    <div class="row">
+    <div class="row divider">
       {{#if this.routine.name_routine}}
       <div class="col-6 text-center">
         <span>{{this.routine.name_routine}}</span>
@@ -22,20 +26,22 @@
       </div>
     </div>
     {{/each}}
-
+  </div>
   <br>
-
   <br>
+  <div class="text-center">
+    <span>Last Seven Workouts</span>
+  </div>
+  
 
+  <div id="analytics">
+    <canvas id="myChart"></canvas>
+  </div>
 </div>
 
 
-<div id="analytics">
-  <canvas id="myChart"></canvas>
 
-</div>
 
-</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
