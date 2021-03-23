@@ -8,7 +8,8 @@
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
     "watch": "nodemon server.js",
-    "seed": "node seeds/seed.js"
+    "seed": "node seeds/seed.js",
+    "postdeploy": "npm run seed"
   },
   "keywords": [],
   "author": "",
